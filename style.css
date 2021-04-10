@@ -6,7 +6,7 @@
 }
 body {
   display: grid;
-  border-color: #000;
+  background-color: #000;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
@@ -46,6 +46,13 @@ img {
 }
 .navigation-item a:hover {
   color: #ffb548;
+}
+.dropdown {
+  display: none;
+}
+
+.drop-down:focus {
+  outline: none;
 }
 .navigation-item {
   font-weight: 700;
@@ -602,11 +609,11 @@ span.sim-dot {
   opacity: 0.5;
 }
 .subscribe-button {
-  padding-top: 2px;
+  padding-top: 0px;
   font-family: "Open Sans", sans-serif;
   min-width: 260px;
   height: 60px;
-  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  background-color: #ffb548;
   border-radius: 4px;
   font-weight: bold;
   font-size: 16px;
@@ -615,11 +622,18 @@ span.sim-dot {
   text-transform: capitalize;
   color: #1a1917;
 }
+.subscribe-button:hover {
+  background-color: rgb(216, 107, 64);
+  transition: 1s;
+}
+.subscribe-button:focus {
+  outline: none;
+}
 .footer {
   background-color: rgb(9, 9, 9);
 }
 .footer-navigation {
-  padding: 30px 0;
+  padding: 80px 0 30px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -660,13 +674,428 @@ span.sim-dot {
 }
 .footer-info-list-item {
   padding-left: 15px;
+  opacity: 0.6;
 }
 .footer-info-list-item:not(:last-child) {
   padding-right: 15px;
   border-right: 1px solid #fff;
-  opacity: 0.6;
 }
 .footer-info-list-item:hover {
   transition: 0.6s;
   opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .subscribe-button {
+    margin-top: 20px;
+  }
+  .subscribe-input {
+    width: 260px;
+  }
+  .gallery-text h2 {
+    font-size: 70px;
+  }
+  .dropdown {
+    display: block;
+  }
+  .navigation-icons {
+    display: none;
+  }
+  .navigation-list {
+    display: none;
+  }
+  /**/
+  .dropbtn {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropbtn:hover,
+  .dropbtn:focus {
+    outline: none;
+  }
+  .content {
+    max-width: 900px;
+  }
+  .header {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffb548;
+    max-width: 80px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    display: flex;
+    color: black;
+    padding: 12px 5px;
+    text-decoration: none;
+    display: block;
+    font-size: 8px;
+  }
+  .dropdown a:hover {
+    background-color: #fff;
+  }
+  .show {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gallery-text {
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+  .sim-slider {
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 790px) {
+  .content {
+    max-width: 750px;
+  }
+  .header {
+    max-width: 700px;
+  }
+  .quotes-content {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .quotes-btn {
+    margin-bottom: 20px;
+  }
+  .subscribe-image {
+    padding-top: 50px;
+    padding-right: 15px;
+    width: 300px;
+    height: 500px;
+  }
+  .subscribe-subtitle {
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .subscribe-title {
+    padding-bottom: 20px;
+    font-size: 50px;
+    line-height: 50px;
+    max-width: 300px;
+  }
+  .subscribe-descr {
+    padding-bottom: 20px;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .footer-info {
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+    padding: 15px 0;
+  }
+  .footer-navigation {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .footer-company-info {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .accordion {
+    max-width: 400px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .features-title {
+    font-size: 50px;
+    line-height: 50px;
+    max-width: 400px;
+  }
+  .features-subtitle {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .dropdown-content {
+    max-width: 80px;
+  }
+  .header {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 620px) {
+  .hero-title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .system-title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .the-story {
+    padding-bottom: 40px;
+  }
+  .features-container {
+    height: 700px;
+    max-width: 300px;
+  }
+  .header {
+    max-width: 400px;
+  }
+}
+@media (max-width: 575px) {
+  .system-recomends {
+    border: 1px solid #696969;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 300px;
+    width: 475px;
+    margin-bottom: 100px;
+    border-radius: 0;
+  }
+  .system-p {
+    padding-left: 10px;
+    max-width: 200px;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: justify;
+    color: #ffffff;
+  }
+  .system-h3 {
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .subscribe-image {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .sim-slider img {
+    max-width: 200px;
+    max-height: 300px;
+    padding: 0px 10px 0 50px;
+  }
+  .sim-slider {
+    width: 50px;
+    margin: 0;
+  }
+  .gallery {
+    padding: 0;
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    max-width: 250px;
+  }
+  .content {
+    max-width: 350px;
+    padding: 5px;
+    margin: 0 auto;
+  }
+  .hero-title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .hero-subtitle {
+    max-width: 350px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .hero-main {
+    padding: 100px 0 100px 0;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  div.sim-slider-dots {
+    margin-bottom: -200px;
+  }
+  .story-text {
+    font-size: 12px;
+    margin: 0 auto;
+  }
+  .the-story svg {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .gallery-descr {
+    max-width: 200px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .gallery-text h2 {
+    max-width: 200px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .gallery-subtitle-text {
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .gallery-text {
+    --galery-text-width: 375px;
+    max-width: var(--galery-text-width);
+  }
+  .sim-slider {
+    padding: 0;
+    width: 50px;
+    margin: 0;
+  }
+  .system-subtitle {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .system-title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .system-text {
+    max-width: 360px;
+    padding-bottom: 40px;
+  }
+  .system-recomends {
+    border: 1px solid #696969;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 300px;
+    width: 345px;
+    margin-bottom: 100px;
+    border-radius: 0;
+  }
+  .system-p {
+    padding-left: 5px;
+    max-width: 150px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: justify;
+    color: #ffffff;
+  }
+  .system-h3 {
+    padding-left: 5px;
+  }
+  .system-p-graphics {
+    white-space: unset;
+    margin-left: 15px;
+    margin: 0;
+    min-width: 300px;
+  }
+  .quotes-subtitle {
+    padding-top: 60px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .quotes-title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .quotes-descr {
+    margin: 0;
+    max-width: 340px;
+    padding: 20px 0;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+  }
+  .quotes-btn {
+    margin-bottom: 40px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .qoutes-people-name {
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  .quote-text {
+    padding-left: 5px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+  .people-info {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .subscribe-title {
+    padding-bottom: 20px;
+    font-size: 30px;
+    line-height: 30px;
+    max-width: 300px;
+  }
+  .subscribe-input {
+    width: 255px;
+    height: 50px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .subscribe-input::placeholder {
+    font-size: 15px;
+  }
+  .subscribe-button {
+    height: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .footer-navigation {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .footer-info-list {
+    display: block;
+  }
+  .footer-info-list-item {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 150px;
+    padding: 0;
+    padding-left: 0px;
+    opacity: 0.6;
+  }
+  .footer-info-list-item:not(:last-child) {
+    padding-right: 0px;
+    border: none;
+  }
+  .footer-company-info {
+    max-width: 320px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+  }
+  .item2 {
+    padding: 0 5px;
+    border-left: 1px solid #696969;
+    border-right: 1px solid #696969;
+  }
+  .panel {
+    padding: 0 25px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .buy-in-steam-button button {
+    font-size: 13px;
+    line-height: 18px;
+    width: 210px;
+    padding-left: 15px;
+    height: 50px;
+  }
+  .buy-in-steam-button {
+    width: 210px;
+  }
 }

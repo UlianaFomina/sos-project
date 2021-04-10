@@ -32,6 +32,22 @@
             <li class="navigation-item"><a href="#">quotes</a></li>
           </ul>
         </div>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn btn-reset">
+            <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="9.49854" y="15.0166" width="14.585" height="2.5" rx="1.25" fill="white" />
+              <rect x="0.596191" y="7.51657" width="23.4873" height="2.5" rx="1.25" fill="white" />
+              <rect x="0.596191" y="0.016571" width="23.4873" height="2.5" rx="1.25" fill="white" />
+            </svg>
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a class="navigation-item" href="#">more</a>
+            <a class="navigation-item" href="#">about</a>
+            <a class="navigation-item" href="#">game features</a>
+            <a class="navigation-item" href="#">system requirements</a>
+            <a class="navigation-item" href="#">quotes</a>
+          </div>
+        </div>
         <div class="navigation-icons">
           <a href="#" class="navigation-xb">
             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,13 +81,14 @@
             </button>
         </div>
       </div>
-      <div class="the-story">
+      <div id="the-story" class="the-story">
         <p class="story-text">The Story</p>
-        <a href="#gallery" class="story-arrow"></a>
-        <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21.2739 1.61609H1.01953L11.0333 9.78521L21.2739 1.61609Z" stroke="white" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+        <a href="#gallery" class="story-arrow"> 
+          <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.2739 1.61609H1.01953L11.0333 9.78521L21.2739 1.61609Z" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -351,7 +368,7 @@
       <div class="footer-info-links">
         <ul class="footer-info-list list-reset">
           <li class="footer-info-list-item"><a href="#">Privacy Policy</a></li>
-          <li class="footer-info-list-item"><a href="#">Terms of Services</a></li>
+          <li class="footer-info-list-item item2"><a href="#">Terms of Services</a></li>
           <li class="footer-info-list-item"><a href="#">Code of Conduct</a></li>
         </ul>
       </div>
